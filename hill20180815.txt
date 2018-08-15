@@ -1,0 +1,19 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+import time
+def is_odd(x):
+    return x % 2 == 1
+
+count=0
+for i in range (400,600):
+	b=[]
+	if is_odd(i):
+		for j in str(i):
+			b.append(int(j))
+		if b[0] !=b[1] and b[0] !=b[2] and b[1] !=b[2] :
+			count=count+1
+			print (b)
+			b.clear()
+print(count)
+t=time.gmtime()
+print (time.strftime("%Y-%m-%d %H:%M:%S",t)) 
